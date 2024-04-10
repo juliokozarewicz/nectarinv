@@ -18,7 +18,7 @@ class financialInvoices(models.Model):
         ('overdue', _('overdue')),
     )
 
-    #user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     posting_type = models.CharField(max_length=50, choices=POSTING_TYPES, default='expense')
     payment_description = models.CharField(max_length=250)
