@@ -1,12 +1,12 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import api_view
+from .views import financialApiView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 app_name = 'api'
 
 router = DefaultRouter()
-router.register(r'api', api_view, basename='api_view')
+router.register(r'financial', financialApiView, basename='financialApiView')
 
 urlpatterns = [
     path('', include(router.urls)),
