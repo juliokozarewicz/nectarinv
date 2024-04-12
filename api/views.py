@@ -28,6 +28,9 @@ class financialApiView(viewsets.ModelViewSet):
 
     permission_classes = [IsAuthenticated]
 
+    def get_queryset(self):
+        return self.queryset.filter(user=self.request.user)
+
     def create(self, request):
         serializer = self.serializer_class(data=request.data)
 
