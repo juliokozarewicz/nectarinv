@@ -1,0 +1,14 @@
+* Documentation: 
+Full documentation in '/docs'.
+
+* Login:
+Basic authentication;
+JWT token;
+Account activation via link received in email.
+
+* Financial: 
+Financial control;
+Accounts payable and receivable;
+Invoices;
+Credit card control.
+

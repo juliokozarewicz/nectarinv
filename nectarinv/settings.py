@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'rest_framework',
     'rest_framework_simplejwt',
+    'rest_framework_swagger',
+    'drf_yasg',
     'api',
     'financial',
 ]
@@ -169,6 +171,8 @@ REST_FRAMEWORK = {
 }
 # ----------------------------------------------------------------------------
 
+# Allauth configs
+# ----------------------------------------------------------------------------
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
@@ -194,17 +198,4 @@ TEMPLATES = [
         },
     },
 ]
-
-# Provider specific settings
-SOCIALACCOUNT_PROVIDERS = {
-    'google': {
-        # For each OAuth based provider, either add a ``SocialApp``
-        # (``socialaccount`` app) containing the required client
-        # credentials, or list them here:
-        'APP': {
-            'client_id': '123',
-            'secret': '456',
-            'key': ''
-        }
-    }
-}
+# ----------------------------------------------------------------------------
