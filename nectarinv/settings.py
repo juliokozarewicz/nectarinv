@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     'api',
     'financial',
+    'dj_rest_auth',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -141,25 +143,6 @@ STATIC_ROOT = path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = ['statics']
 
 STATIC_URL = '/static/'
-# ----------------------------------------------------------------------------
-
-# Templates
-# ----------------------------------------------------------------------------
-TEMPLATES = [
-	{
-		'BACKEND': 'django.template.backends.django.DjangoTemplates',
-		'DIRS': [path.join(BASE_DIR, 'templates'), path.join(BASE_DIR, 'templates', 'allauth')],
-		'APP_DIRS': True,
-		'OPTIONS': {
-			'context_processors': [
-				'django.template.context_processors.debug',
-				'django.template.context_processors.request',
-				'django.contrib.auth.context_processors.auth',
-				'django.contrib.messages.context_processors.messages',
-			],
-		},
-	},
-]
 # ----------------------------------------------------------------------------
 
 # Django Rest Framework
